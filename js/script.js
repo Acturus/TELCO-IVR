@@ -6,7 +6,7 @@ $(function(){
 	   - Jquery 2 (manejo de eventos y JSON)
 	   - Speech API (compatible con Firefox, Opera y Chrome)
 	   
-	   NOTA: Para habilitar la speech API en Firefox se debe ingresar en nueva pestaña a "about:config"
+	    NOTA: Para habilitar la speech API en Firefox se debe ingresar en nueva pestaña a "about:config"
 	   		luego buscar el flag "media.webspeech.synth.enabled" cambiarlo a TRUE o ENABLED y reiniciar firefox
     */
 
@@ -133,13 +133,13 @@ $(function(){
 
 					/* Mediante la speech api se explica el menú de opciones */
 
-					speakIt('Marque uno para consultar sus minutos de voz, marque 2 para consultar sus mensajes de texto disponibles, marque 3 para consultar su paquete de datos, marque 4 para consultar su saldo actual, para repetir las opciones marque asterisco');
+					speakIt('Marque uno para consultar sus minutos de voz, marque 2 para consultar sus mensajes de texto, marque 3 para consultar su paquete de datos, marque 4 para consultar su saldo actual, para repetir opciones marque asterisco');
 					
 					/* ADICIONAL : marcar asterisco para repetir las opciones */
 					$("#asterisk").click(function(event) {
 						window.speechSynthesis.cancel();
 						setTimeout(function(){
-							speakIt('Marque uno para consultar sus minutos de voz, marque 2 para consultar sus mensajes de texto disponibles, marque 3 para consultar su paquete de datos, marque 4 para consultar su saldo actual, para repetir las opciones marque asterisco');
+							speakIt('Marque uno para consultar sus minutos de voz, marque 2 para consultar sus mensajes de texto, marque 3 para consultar su paquete de datos, marque 4 para consultar su saldo actual, para repetir opciones marque asterisco');
 						}, 250);
 					});
 
@@ -178,7 +178,7 @@ $(function(){
 					$("#dos").click(function(){
 						window.speechSynthesis.cancel();
 
-						var sms = info.sms[0];
+						var sms = parseFloat(info.sms[0]);
 						var fech = info.sms[1].split('/');
 						var vcto = new Date(fech[2]+'/'+fech[1]+'/'+fech[0]);
 
