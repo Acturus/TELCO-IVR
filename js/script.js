@@ -5,7 +5,9 @@ $(function(){
 	   - DTMF Generator (para el efecto de sonido del dialpad)
 	   - Jquery 2 (manejo de eventos y JSON)
 	   - Speech API (compatible con Firefox, Opera y Chrome)
-	   NOTA: Para habilitar la speech API en Firefox
+	   
+	   NOTA: Para habilitar la speech API en Firefox se debe ingresar en nueva pestaña a "about:config"
+	   		luego buscar el flag "media.webspeech.synth.enabled" cambiarlo a TRUE o ENABLED y reiniciar firefox
     */
 
     /* 1) Se definen algunas variables globales */
