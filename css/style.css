@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?ewrcx3');
+	src:url('../fonts/icomoon.eot?ewrcx3#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?ewrcx3') format('truetype'),
+		url('../fonts/icomoon.woff?ewrcx3') format('woff'),
+		url('../fonts/icomoon.svg?ewrcx3#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-michi:before {
+	content: "\e903";
+	font-size: 75%;
+}
+.icon-asterisk:before {
+	content: "\e904";
+	font-size: 70%;
+}
+.icon-deler:before {
+	content: "\e902";
+}
+.icon-phone:before {
+	content: "\e900";
+}
+.icon-phone-hang-up:before {
+	content: "\e901";
+}
+
+#phone{
+	max-width: 275px;
+	height: 495px;
+	background-image: url('../img/iphone.png');
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+#phone>div{
+	width: 220px;
+	height: 300px;
+	position: absolute;
+	top: 83px;
+    left: 29px;
+}
+
+.dial{height: 16.5%;}
+
+.btn{
+	width: 32%;
+	height: 100%;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.btn button{
+	width: 100%;
+	height: 85%;
+	position: absolute;
+	bottom: 0;
+}
+
+#number{
+	display: block;
+    height: 100%;
+    text-align: right;
+    color: white;
+    font-size: 35px;
+    padding-top: 8.5px;
+    font-family: sans-serif;
+    direction: rtl;
+    overflow: hidden;
+}
+
+#toggle-call[disabled]{
+	background-color: rgb(221, 221, 221) !important;
+}
+
+#toggle-call.end{
+	background-color: red;
+}
+
+#toggle-call.call{
+	background-color: green;
+}
+
+
+
+
+
+
+
+
+

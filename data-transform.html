@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<script src="js/jquery2.js"></script>
+	<script src="js/datos.js"></script>
+	<script>
+
+		$(function(){
+
+			var data = {};
+
+			$.each(datos, function(i, item) {
+				
+				var valores = {};
+
+				valores.saldo = [item.saldo, item.fvto_saldo];
+				valores.datos = [item.paquete_datos, item.fvto_datos];
+				valores.segs = [item.seg_disp, item.fvto_seg];
+				valores.sms = [item.msg_texto, item.fvto_msg];
+
+				data[item.numero] = valores;
+
+			});
+
+			$("#obj").text('var data = '+JSON.stringify(data)+';');
+
+		});
+
+		
+	</script>
+	<title>Trasformado JSON</title>
+</head>
+<body>
+	<h3>El presente documento HTML imprime la modificación realizada a datos.js que se utiliza en el IVR(telco.html) el reordenamiento de los datos se realizó via javascript (ver código de este archivo)</h3>
+	<div id="obj"></div>
+	<h4>NOTA: Los datos generados han sido almacenados en la ruta 'js/datos-new.js'</h4>
+</body>
+</html>
